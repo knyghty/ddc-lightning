@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="590" viewBox="0 0 1280 590" font-family="Lato, 'Avenir Next', Avenir, 'Trebuchet MS', 'Segoe UI', sans-serif" font-size="26" fill="#455a64" letter-spacing="0.5">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#455a64"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#047857"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+
+  <!-- cookie issuance -->
+  <rect x="30" y="40" width="350" height="125" rx="12" fill="#455a64" fill-opacity="0.08" stroke="#455a64" stroke-width="2.5"/>
+  <text x="205" y="80" text-anchor="middle">Successful login or</text>
+  <text x="205" y="112" text-anchor="middle">confirmed password reset</text>
+  <text x="205" y="144" text-anchor="middle">issues a signed cookie</text>
+
+  <line x1="205" y1="165" x2="205" y2="253" stroke="#455a64" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+
+  <!-- login attempt -->
+  <rect x="30" y="255" width="350" height="70" rx="12" fill="#455a64" fill-opacity="0.08" stroke="#455a64" stroke-width="2.5"/>
+  <text x="205" y="300" text-anchor="middle" font-size="28" font-weight="bold">Login attempt</text>
+
+  <line x1="380" y1="290" x2="428" y2="290" stroke="#455a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- decision -->
+  <polygon points="570,205 715,290 570,375 425,290" fill="none" stroke="#455a64" stroke-width="2.5"/>
+  <text x="570" y="283" text-anchor="middle" font-size="24">Valid cookie</text>
+  <text x="570" y="311" text-anchor="middle" font-size="24">for this account?</text>
+
+  <!-- yes branch -->
+  <polyline points="570,205 570,160 798,160" fill="none" stroke="#047857" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="584" y="192" font-size="22" fill="#047857">yes</text>
+
+  <!-- no branch -->
+  <polyline points="570,375 570,440 798,440" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="584" y="402" font-size="22" fill="#b91c1c">no</text>
+
+  <!-- device bucket -->
+  <path d="M 805 95 L 965 95 L 950 225 L 820 225 Z" fill="#d1fae5" stroke="#047857" stroke-width="2.5"/>
+  <ellipse cx="885" cy="95" rx="80" ry="10" fill="#ecfdf5" stroke="#047857" stroke-width="2.5"/>
+  <g stroke="#b91c1c" stroke-width="4" stroke-linecap="round">
+    <line x1="873" y1="148" x2="897" y2="172"/>
+    <line x1="897" y1="148" x2="873" y2="172"/>
+  </g>
+  <text x="885" y="262" text-anchor="middle" font-size="28" font-weight="bold">Device bucket</text>
+  <text x="885" y="290" text-anchor="middle" font-size="22" fill="#455a64" fill-opacity="0.8">one per cookie</text>
+
+  <text x="990" y="150" font-size="24">5 failures in 15 min</text>
+  <text x="990" y="180" font-size="24">lock this device only</text>
+
+  <!-- untrusted bucket -->
+  <path d="M 805 375 L 965 375 L 950 505 L 820 505 Z" fill="#fee2e2" stroke="#b91c1c" stroke-width="2.5"/>
+  <ellipse cx="885" cy="375" rx="80" ry="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2.5"/>
+  <g stroke="#b91c1c" stroke-width="4" stroke-linecap="round">
+    <line x1="839" y1="414" x2="863" y2="438"/><line x1="863" y1="414" x2="839" y2="438"/>
+    <line x1="873" y1="414" x2="897" y2="438"/><line x1="897" y1="414" x2="873" y2="438"/>
+    <line x1="907" y1="414" x2="931" y2="438"/><line x1="931" y1="414" x2="907" y2="438"/>
+    <line x1="856" y1="446" x2="880" y2="470"/><line x1="880" y1="446" x2="856" y2="470"/>
+    <line x1="890" y1="446" x2="914" y2="470"/><line x1="914" y1="446" x2="890" y2="470"/>
+  </g>
+  <text x="885" y="542" text-anchor="middle" font-size="28" font-weight="bold">Untrusted bucket</text>
+  <text x="885" y="570" text-anchor="middle" font-size="22" fill="#455a64" fill-opacity="0.8">one per account</text>
+
+  <text x="990" y="400" font-size="24">Shared by everyone</text>
+  <text x="990" y="430" font-size="24">without a cookie</text>
+  <text x="990" y="470" font-size="24">5 failures in 15 min</text>
+  <text x="990" y="500" font-size="24">lock all of them</text>
+</svg>
