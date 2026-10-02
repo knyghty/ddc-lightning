@@ -1,5 +1,5 @@
 ---
-footer: "Tom Carrick | [carrick.eu](https://carrick.eu) | github.com/knyghty/django-device-cookies"
+footer: "Tom Carrick | [carrick.eu](https://carrick.eu) | [github.com/knyghty/django-device-cookies](https://github.com/knyghty/django-device-cookies)"
 header: Better* login rate limiting
 marp: true
 paginate: true
